@@ -32,9 +32,16 @@ public class DatabaseHandler {
         return false;
     }
 
-    public ResultSet doStatement(String sqlStatement) {
+    public Object doStatment(String sqlStatement) {
+        return doStatement(sqlStatement, "");
+    }
+
+    public Object doStatement(String sqlStatement, String type) {
         try {
             PreparedStatement pd = con.prepareStatement(sqlStatement);
+            if (type.equalsIgnoreCase("update")) {
+                return pd.executeUpdate();
+            }
             return pd.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
