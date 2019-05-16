@@ -13,6 +13,7 @@ import java.sql.SQLException;
 public class AccountServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         RequestDispatcher rd = request.getRequestDispatcher("/html/Account.html");
+        rd.forward(request, response);
         String accountType = request.getParameter("type");
         String accountName = request.getParameter("accountName");
         String sharedAccount = request.getParameter("sharetype");
