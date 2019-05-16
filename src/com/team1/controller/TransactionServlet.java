@@ -14,9 +14,12 @@ import java.sql.SQLException;
 @WebServlet ("/createTransaction")
 public class TransactionServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        PrintWriter output = response.getWriter();
-        RequestDispatcher rd = request.getRequestDispatcher("/html/Transactions.html");
-        rd.forward(request, response);
+        doGet(request, response);
+
+    }
+
+    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
         int fromAccountID = Integer.valueOf(request.getParameter("fromAccountID"));
         int toAccountID = Integer.valueOf(request.getParameter("toAccountID"));
         Double amount = Double.valueOf(request.getParameter("amount"));
@@ -31,9 +34,6 @@ public class TransactionServlet extends javax.servlet.http.HttpServlet {
                 e.printStackTrace();
             }
         }
-    }
-
-    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-
+        rd.forward(request, response);
     }
 }
