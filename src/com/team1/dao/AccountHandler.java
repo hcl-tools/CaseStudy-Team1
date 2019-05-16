@@ -58,4 +58,23 @@ public class AccountHandler {
         }
         return accounts;
     }
+
+    public Double getBalance(int id) {
+        Double balance = 0.00;
+        ApplicationHandler.dh.doConnect();
+        try {
+            ResultSet result = ApplicationHandler.dh.doStatement("SELECT * FROM Transactions WHERE fromAccountId = " + id + " OR toAccountId = " + id);
+            while(result.next()) {
+                if (result.getString("fromAccountId").equals(id)) {
+                    // We are sending out money.
+                    balance -= result.getDouble("amount");
+                } else if (result.getString("toAccountId").equals(id)) {
+                    balance += result.getDouble("amount");
+                }
+            }
+        } catch (Exception e ){
+            e.printStackTrace();
+        }
+        return balance;
+    }
 }
