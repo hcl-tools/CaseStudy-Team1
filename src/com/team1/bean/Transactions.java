@@ -19,7 +19,7 @@ public class Transactions {
 
     public int getToAccountID() { return toAccountID; }
 
-    public Double getAmmount() { return amount; }
+    public Double getAmount() { return amount; }
 
     public int getFromAccountID() { return fromAccountID; }
 
