@@ -38,14 +38,9 @@ public class AccountHandler {
         Double balance = 0.00;
         ApplicationHandler.dh.doConnect();
         try {
-            ResultSet result = (ResultSet) ApplicationHandler.dh.doStatement("SELECT * FROM Transactions WHERE fromAccountId = " + id + " OR toAccountId = " + id);
-            while(result.next()) {
-                if (result.getString("fromAccountId").equals(id)) {
-                    // We are sending out money.
-                    balance -= result.getDouble("amount");
-                } else if (result.getString("toAccountId").equals(id)) {
-                    balance += result.getDouble("amount");
-                }
+            ResultSet result = ApplicationHandler.dh.doStatement("CALL calculateBalance('" + id + "');");
+            if (result.next()){
+                balance = result.getDouble("Balance");
             }
         } catch (Exception e ){
             e.printStackTrace();
