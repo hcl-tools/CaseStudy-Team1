@@ -13,7 +13,7 @@ import java.util.List;
 
 public class AccountHandler {
 
-    public List<Transactions> getTransactions(String amount) {
+    public static List<Transactions> getTransactions() {
         List<Transactions> transactions = new ArrayList<>();
         try {
             ApplicationHandler.dh.doConnect();
