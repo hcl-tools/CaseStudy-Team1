@@ -4,14 +4,14 @@ public class Transactions {
     private int transID;
     private int toAccountID;
     private int fromAccountID;
-    private float ammount;
+    private float amount;
 
     //Getters
     public int getTransID() { return transID; }
 
     public int getToAccountID() { return toAccountID; }
 
-    public float getAmmount() { return ammount; }
+    public float getAmmount() { return amount; }
 
     public int getFromAccountID() { return fromAccountID; }
 
@@ -23,5 +23,5 @@ public class Transactions {
 
     public void setFromAccountID(int fromAccountID) { this.fromAccountID = fromAccountID; }
 
-    public void setAmmount(float ammount) { this.ammount = ammount; }
+    public void setAmmount(float ammount) { this.amount = ammount; }
 }
