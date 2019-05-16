@@ -20,7 +20,7 @@ public class TransactionServlet extends javax.servlet.http.HttpServlet {
         rd.forward(request, response);
         int fromAccountID = Integer.valueOf(request.getParameter("fromAccountID"));
         int toAccountID = Integer.valueOf(request.getParameter("toAccountID"));
-        double amount = Integer.valueOf(request.getParameter("amount"));
+        double amount = Double.valueOf(request.getParameter("amount"));
         ApplicationHandler.dh.doConnect();
         if (ApplicationHandler.userAccounts.containsKey(fromAccountID)) {
             ApplicationHandler.dh.doStatement(" INSERT INTO Transactions (toAccountID, fromAccountID, amount) VALUES (" + toAccountID + ", " + fromAccountID + ", " + amount +");");
