@@ -15,10 +15,10 @@ public class AccountServlet extends javax.servlet.http.HttpServlet {
         String sharedAccount = request.getParameter("sharetype");
         ApplicationHandler.dh.doConnect();
         ApplicationHandler.dh.doStatement("INSERT INTO Accounts (accountName, accountType) VALUES (" + accountName + ", " + accountType + ");");
-        ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (clientId, accountId) VALUES (" + clientId + ", "+ accountId + ");");
-        if (sharedAccount.equals("joint")){
-            ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (accountSharerId, accountId) VALUES (" + accountSharerId + ", " + accountId + ");");
-        }
+//        ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (clientId, accountId) VALUES (" + clientId + ", "+ accountId + ");");
+//        if (sharedAccount.equals("joint")){
+//            ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (accountSharerId, accountId) VALUES (" + accountSharerId + ", " + accountId + ");");
+//        }
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
