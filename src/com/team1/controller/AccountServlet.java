@@ -1,6 +1,6 @@
 package com.team1.controller;
 
-import com.team1.main.ApplicationHandler;
+import com.team1.util.ApplicationHandler;
 
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
