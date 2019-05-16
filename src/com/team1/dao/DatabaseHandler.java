@@ -52,8 +52,8 @@ public class DatabaseHandler {
     public boolean doClose() {
         try {
             con = null;
-            return con.isClosed();
-        } catch (SQLException e) {
+            return true;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
