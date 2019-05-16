@@ -13,10 +13,22 @@
   </head>
   <body>
 
-  <div class="topSpacer"></div>
+  <div class="topSpacer">
+    <h1>WELCOME TO HELL'S BANK</h1>
+  </div>
   <div class="formContainer">
 
+    <%
+
+      int errorCode = 0;
+
+      if(request.getAttribute("errorCode") != null) {
+        errorCode = (Integer) request.getAttribute("errorCode");
+      }
+    %>
+
     <form action="./login">
+      <input type="hidden" name="page" value="lp">
       Username: <br>
       <input type="text" name="username" value="">
       <br>
@@ -26,6 +38,14 @@
       <input type="submit" value="Submit">
     </form>
 
+
+    <%
+      if(errorCode == 1){
+    %>
+    <h2>Incorrect Username or Password, Please Try Again.</h2>
+    <%
+      }
+    %>
   </div>
 
   </body>
