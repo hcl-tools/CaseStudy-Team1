@@ -15,22 +15,53 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/findTransactions" method="post">
-    <h3>What was the amount of the transaction?</h3>
-    <input type="number" name="amount" min="1" />
-    <input type="submit" />
-</form>
-<%
-    Double amount = Double.valueOf(request.getParameter("amount"));
-    List<Transactions> found = new ArrayList<>();
-    for (Transactions transaction : ApplicationHandler.userTransactions.values()) {
-        if (transaction.getAmount().equals(amount)) {
-            found.add(transaction);
+    <%
+        boolean searchForm = true;
+
+        if (request.getAttribute("searchForm") != null) {
+            searchForm = (Boolean) request.getAttribute("searchForm");
         }
-    }
-    for (Transactions f : found) {
-        out.print(f);
-    }
-%>
+
+        if (searchForm) {
+    %>
+    <form action="findTransactions" method="post">
+        <h3>What was the amount of the transaction?</h3>
+        <input type="number" name="amount" min="1" />
+        <input type="submit" />
+    </form>
+    <%
+        }
+
+        if (!searchForm) {
+    %>
+    <table style="width:100%">
+        <tr>
+            <th>ID</th>
+            <th>To Account</th>
+            <th>From Account</th>
+            <th>Amount</th>
+        </tr>
+        <%
+            List<Transactions> found = new ArrayList<>();
+            for (Transactions trans : ApplicationHandler.userTransactions.values()) {
+                if (trans.getAmount().equals((Double) request.getAttribute("amount"))) {
+                    found.add(trans);
+                }
+            }
+
+            for (Transactions trans : found) {
+                out.print("<tr style=\"text-align: center\">");
+                out.print("<td>" + trans.getTransID() + "</td>");
+                out.print("<td>" + trans.getToAccountID() + "</td>");
+                out.print("<td>" + trans.getFromAccountID() + "</td>");
+                out.print("<td> $" + trans.getAmount() + "</td>");
+                out.print("</tr>");
+            }
+        %>
+    </table>
+    <%
+        }
+    %>
+
 </body>
 </html>
