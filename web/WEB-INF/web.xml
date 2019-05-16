@@ -8,6 +8,6 @@
         <servlet-class>com.team1.controller.AccountServlet</servlet-class>
     </servlet>
     <welcome-file-list>
-        <welcome-file>jsp/index.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

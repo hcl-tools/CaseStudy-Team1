@@ -1,6 +1,6 @@
 package com.team1.dao;
 
-import com.team1.main.ApplicationHandler;
+import com.team1.util.ApplicationHandler;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
