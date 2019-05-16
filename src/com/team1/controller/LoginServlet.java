@@ -1,5 +1,6 @@
 package com.team1.controller;
 
+import com.team1.dao.AccountHandler;
 import com.team1.dao.LoginService;
 
 import javax.servlet.RequestDispatcher;
@@ -19,13 +20,14 @@ public class LoginServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
-        RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
         if(LoginService.verifyClient(username, password)){
-
+            AccountHandler.getAccounts();
+            rd.forward(request, response);
         }
         else{
 

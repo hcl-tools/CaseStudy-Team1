@@ -28,7 +28,7 @@ public class AccountHandler {
         return null;
     }
 
-    public List<Account> getAccounts() {
+    public static List<Account> getAccounts() {
         // Works with the saved user.
         List<Account> accounts = new ArrayList<>();
         try {
@@ -54,7 +54,7 @@ public class AccountHandler {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            ApplicationHandler.dh.doClose();
+//            ApplicationHandler.dh.doClose();
         }
         return accounts;
     }
