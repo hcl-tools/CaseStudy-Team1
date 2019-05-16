@@ -20,4 +20,8 @@ public class ApplicationHandler {
         userTransactions.clear();
         return userData.containsKey("id");
     }
+
+    public boolean isLoggedIn() {
+        return userData.containsKey("id");
+    }
 }
