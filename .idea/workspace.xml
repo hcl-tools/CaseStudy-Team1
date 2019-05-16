@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="53ac44bc-29c6-4350-ad40-f427ed5425a7" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/com/team1/main/ApplicationHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/team1/dao/blank.txt" beforeDir="false" />
+=======
+    <list default="true" id="6c5d2799-27c9-481a-8595-01d8874d29b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/team1/bean/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,6 +23,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< Updated upstream
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/team1/bean/blank.txt">
@@ -66,6 +73,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
               <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+=======
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/team1/bean/Account.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -75,6 +90,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< Updated upstream
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
@@ -94,11 +110,86 @@
         <option value="$PROJECT_DIR$/src/com/team1/dao/DatabaseHandler.java" />
         <option value="$PROJECT_DIR$/src/com/team1/main/ApplicationHandler.java" />
       </list>
+=======
+        <option value="Class" />
+      </list>
+>>>>>>> Stashed changes
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1200" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/team1/bean/Client.java" />
+        <option value="$PROJECT_DIR$/src/com/team1/bean/Account.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1460" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CaseStudy-Team1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CaseStudy-Team1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CaseStudy-Team1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CaseStudy-Team1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CaseStudy-Team1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CaseStudy-Team1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="team1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CaseStudy-Team1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CaseStudy-Team1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="team1" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CaseStudy-Team1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CaseStudy-Team1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="team1" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CaseStudy-Team1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CaseStudy-Team1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="team1" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CaseStudy-Team1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CaseStudy-Team1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="team1" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -167,12 +258,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+<<<<<<< Updated upstream
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+=======
+    <property name="settings.editor.selected.configurable" value="com.github.izhangzhihao.rainbow.brackets.settings.RainbowConfigurable" />
+>>>>>>> Stashed changes
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -204,7 +300,11 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
+<<<<<<< Updated upstream
         <option name="DEBUG_PORT" value="50448" />
+=======
+        <option name="DEBUG_PORT" value="52760" />
+>>>>>>> Stashed changes
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -264,6 +364,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
       <changelist id="53ac44bc-29c6-4350-ad40-f427ed5425a7" name="Default Changelist" comment="" />
       <created>1557958547920</created>
       <option name="number" value="Default" />
@@ -271,10 +372,20 @@
       <updated>1557958547920</updated>
       <workItem from="1557958552082" duration="493000" />
       <workItem from="1557966307499" duration="212000" />
+=======
+      <changelist id="6c5d2799-27c9-481a-8595-01d8874d29b4" name="Default Changelist" comment="" />
+      <created>1557964455710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557964455710</updated>
+      <workItem from="1557964465637" duration="221000" />
+      <workItem from="1557964822624" duration="1590000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="705000" />
   </component>
   <component name="ToolWindowManager">
@@ -282,6 +393,15 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25239617" />
+=======
+    <option name="totallyTimeSpent" value="1811000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1460" height="877" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496474" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -314,6 +434,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/com/team1/bean/blank.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -425,5 +546,21 @@
         </settings>
       </state>
     </states>
+=======
+    <entry file="file://$PROJECT_DIR$/CaseStudy-Team1.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/team1/bean/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
   </component>
 </project>
