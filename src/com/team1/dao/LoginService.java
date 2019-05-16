@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class LoginService {
 
-    public boolean verifyClient(String username, String password){
+    public static boolean verifyClient(String username, String password){
         ApplicationHandler.dh.doConnect();
         ResultSet allUsers = getAllClients();
 
@@ -23,7 +23,7 @@ public class LoginService {
         return false;
     }
 
-    public ResultSet getAllClients(){
+    public static ResultSet getAllClients(){
         ApplicationHandler.dh.doConnect();
         ResultSet rs = ApplicationHandler.dh.doStatement("SELECT * FROM Clients;");
         return rs;

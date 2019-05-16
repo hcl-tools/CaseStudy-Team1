@@ -11,6 +11,10 @@
         <servlet-name>TransactionServlet</servlet-name>
         <servlet-class>com.team1.controller.TransactionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.team1.controller.LoginServlet</servlet-class>
+    </servlet>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
