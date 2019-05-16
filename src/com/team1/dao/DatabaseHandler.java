@@ -32,7 +32,7 @@ public class DatabaseHandler {
         return false;
     }
 
-    public Object doStatment(String sqlStatement) {
+    public Object doStatement(String sqlStatement) {
         return doStatement(sqlStatement, "");
     }
 
