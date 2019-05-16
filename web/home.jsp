@@ -15,9 +15,8 @@
 
   <div class="navbar">
     <ul>
-      <li><a href="displayTransactions.jsp">Display Transactions</a></li>
+      <li><a href="displayTransactions.jsp">Display All Transactions</a></li>
       <li><a href="displayAccounts.jsp">Display All Accounts</a></li>
-      <li><a href="displayAccount.jsp">Display Account</a></li>
       <li><a href="findAccount.jsp">Find Account</a></li>
       <li><a href="findTransactions.jsp">Find Transactions</a></li>
       <li><a href="createAccounts.jsp">Create Account</a></li>
