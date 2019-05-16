@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet {
 
             if (LoginService.verifyClient(username, password)) {
                 AccountHandler.getAccounts();
+                AccountHandler.getTransactions();
                 rdhome.forward(request, response);
             } else {
                 request.setAttribute("errorCode", 1);
