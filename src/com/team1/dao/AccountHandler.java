@@ -14,23 +14,24 @@ import java.util.List;
 public class AccountHandler {
 
     public static List<Transactions> getTransactions() {
-//        List<Transactions> transactions = new ArrayList<>();
-//        try {
-//            ApplicationHandler.dh.doConnect();
-//            ResultSet result = ApplicationHandler.dh.doStatement("");
-//            while(result.next()) {
-//                Transactions newTransaction = new Transactions();
-//                newTransaction.setAmmount(result.getDouble("amount"));
-//                newTransaction.setFromAccountID(result.getInt("fromAccountId"));
-//                newTransaction.setToAccountID(result.getInt("toAccountId"));
-//                newTransaction.setTransID(result.getInt("id"));
-//                transactions.add(newTransaction);
-//            }
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-        return null;
+        List<Transactions> transactionList = new ArrayList<>();
+        ApplicationHandler.dh.doConnect();
+        try {
+            ResultSet result = ApplicationHandler.dh.doStatement("SELECT * FROM Transactions WHERE toAccountId = " + ApplicationHandler.userData.get("id") + " OR fromAccountId = " + ApplicationHandler.userData.get("id") + ";");
+            while (result.next()) {
+                Double amount = result.getDouble("amount");
+                int toId = result.getInt("toAccountId");
+                int fromId = result.getInt("fromAccountId");
+                int id = result.getInt("id");
+                Transactions transaction = new Transactions(id, toId, fromId, amount);
+                ApplicationHandler.userTransactions.put(id, transaction);
+                transactionList.add(transaction);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ApplicationHandler.dh.doClose();
+        return transactionList;
     }
 
     public static Double getBalance(int id) {
