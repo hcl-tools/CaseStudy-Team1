@@ -25,9 +25,9 @@ public class AccountServlet extends javax.servlet.http.HttpServlet {
         ApplicationHandler.dh.doConnect();
 
         try {
-            ApplicationHandler.dh.doStatement("INSERT INTO Accounts (accountName, accountType) VALUES (" + accountName + ", " + accountType + ");");
+            ApplicationHandler.dh.doStatement("INSERT INTO Accounts (accountName, accountType) VALUES (\"" + accountName + "\", \"" + accountType + "\");", "update");
             ResultSet result = (ResultSet) ApplicationHandler.dh.doStatement("SELECT MAX(id) AS 'id' FROM Accounts;");
-            ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (clientId, accountId) VALUES (" + ApplicationHandler.userData.get("id") + ", "+ result.getInt("id") + ");", "udpate");
+            ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (clientId, accountId) VALUES (" + ApplicationHandler.userData.get("id") + ", "+ result.getInt("id") + ");", "update");
 
             if (sharedAccount.equals("joint")){
                 ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (accountSharerId, accountId) VALUES (" + accountSharerId + ", " + result.getInt("id") + ");", "update");
