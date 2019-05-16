@@ -35,8 +35,8 @@
       Password: <br>
       <input type="password" name="password" value="">
       <br><br>
-      <input type="checkbox" name="createAccount" value="">Create Account<br>
-      <input type="submit" value="Submit">
+      <input type="submit" name="createAccount" value="Create Account">
+      <input type="submit" value="Log In">
 
     </form>
 

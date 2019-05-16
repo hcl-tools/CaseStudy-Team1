@@ -25,7 +25,6 @@ public class LoginServlet extends HttpServlet {
         RequestDispatcher rdindex = request.getRequestDispatcher("/index.jsp");
 
         String page = request.getParameter("page");
-        String newAccount = request.getParameter()
 
         if(page.equals("lp")) {
             String username = request.getParameter("username");
