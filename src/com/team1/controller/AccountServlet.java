@@ -23,6 +23,7 @@ public class AccountServlet extends javax.servlet.http.HttpServlet {
         String sharedAccount = request.getParameter("sharetype");
         String accountSharerId = request.getParameter("accountSharerId");
         ApplicationHandler.dh.doConnect();
+
         try {
             ApplicationHandler.dh.doStatement("INSERT INTO Accounts (accountName, accountType) VALUES (" + accountName + ", " + accountType + ");");
             ResultSet result = ApplicationHandler.dh.doStatement("SELECT LAST_INSERT_ID();");

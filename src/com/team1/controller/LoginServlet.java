@@ -2,6 +2,7 @@ package com.team1.controller;
 
 import com.team1.dao.AccountHandler;
 import com.team1.dao.LoginService;
+import com.team1.util.ApplicationHandler;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,17 +21,28 @@ public class LoginServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
-        RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
+        RequestDispatcher rdhome = request.getRequestDispatcher("/home.jsp");
+        RequestDispatcher rdindex = request.getRequestDispatcher("/index.jsp");
 
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        String page = request.getParameter("page");
+        String newAccount = request.getParameter()
 
-        if(LoginService.verifyClient(username, password)){
-            AccountHandler.getAccounts();
-            rd.forward(request, response);
+        if(page.equals("lp")) {
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+
+            if (LoginService.verifyClient(username, password)) {
+                AccountHandler.getAccounts();
+                rdhome.forward(request, response);
+            } else {
+                request.setAttribute("errorCode", 1);
+                rdindex.forward(request, response);
+            }
         }
-        else{
 
+        if(page.equals("lout")){
+            ApplicationHandler.logout();
+            rdindex.forward(request, response);
         }
     }
 }

@@ -14,7 +14,7 @@ public class ApplicationHandler {
     public static Map<Integer, Account> userAccounts = new HashMap<>();
     public static Map<Integer, Transactions> userTransactions = new HashMap<>();
 
-    public boolean logout() {
+    public static boolean logout() {
         userData.clear();
         userAccounts.clear();
         userTransactions.clear();

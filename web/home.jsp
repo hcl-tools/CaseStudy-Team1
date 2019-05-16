@@ -14,7 +14,14 @@
 <body>
 
   <div class="navbar">
-
+    <ul>
+      <li><a href="displayTransactions.jsp">Display Transactions</a></li>
+      <li><a href="displayAccount.jsp">Display Account</a></li>
+      <li><a href="findAccount.jsp">Find Account</a></li>
+      <li><a href="findTransactions.jsp">Find Transactions</a></li>
+      <li><a href="createAccounts.jsp">Create Account</a></li>
+      <li><a href="${pageContext.request.contextPath}/login?page=lout">Logout</a></li>
+    </ul>
   </div>
 
 </body>
