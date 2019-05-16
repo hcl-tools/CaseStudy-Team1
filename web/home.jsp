@@ -20,7 +20,7 @@
       <li><a href="findAccount.jsp">Find Account</a></li>
       <li><a href="findTransactions.jsp">Find Transactions</a></li>
       <li><a href="createAccounts.jsp">Create Account</a></li>
-      <li><a href="/CaseStudy_Team1_war_exploded/login?page=lout">Logout</a></li>
+      <li><a href="${pageContext.request.contextPath}/login?page=lout">Logout</a></li>
     </ul>
   </div>
 
