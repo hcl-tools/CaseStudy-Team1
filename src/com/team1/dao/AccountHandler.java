@@ -33,37 +33,6 @@ public class AccountHandler {
         return null;
     }
 
-    public static List<Account> getAccounts() {
-        // Works with the saved user.
-        List<Account> accounts = new ArrayList<>();
-        try {
-            ApplicationHandler.dh.doConnect();
-            ResultSet result = (ResultSet) ApplicationHandler.dh.doStatement("SELECT id, accountID FROM AccountLinks WHERE clientID = " + ApplicationHandler.userData.get("id"));
-            while (result.next()) {
-                ResultSet accountResult = (ResultSet) ApplicationHandler.dh.doStatement("SELECT * FROM Accounts WHERE \"id\" = \"" + result.getInt("id") + "\";");
-                Account nextAccount = null;
-                if (accountResult.next()) {
-                    switch (accountResult.getString("accountType")) {
-                        case "Savings":
-                            nextAccount = new Savings(accountResult.getInt("id"), accountResult.getString("accountName"));
-                            break;
-                        case "Checks":
-                            nextAccount = new Checkings(accountResult.getInt("id"), accountResult.getString("accountName"));
-                            break;
-                        case "Current":
-                        default:
-                            nextAccount = new Current(accountResult.getInt("id"), accountResult.getString("accountName"));
-                    }
-                    accounts.add(nextAccount);
-                    ApplicationHandler.userAccounts.put(nextAccount.getAccountID(), nextAccount);
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return accounts;
-    }
-
     public static Double getBalance(int id) {
         Double balance = 0.00;
         ApplicationHandler.dh.doConnect();
@@ -81,5 +50,32 @@ public class AccountHandler {
             e.printStackTrace();
         }
         return balance;
+    }
+
+    public static void getAccounts() {
+        ApplicationHandler.dh.doConnect();
+        try {
+            ResultSet result = ApplicationHandler.dh.doStatement("SELECT * FROM Accounts WHERE id = " + ApplicationHandler.userData.get("id"));
+            while (result.next()) {
+                Account toLoad = null;
+                String accountName = result.getString("accountName");
+                int id = result.getInt("id");
+                switch (result.getString("accountType")) {
+                    case "Savings":
+                        toLoad = new Savings(id, accountName);
+                        break;
+                    case "Checks":
+                        toLoad = new Checkings(id, accountName);
+                        break;
+                    case "Current":
+                    default:
+                        toLoad = new Current(id, accountName);
+                }
+                ApplicationHandler.userAccounts.put(id, toLoad);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ApplicationHandler.dh.doClose();
     }
 }
