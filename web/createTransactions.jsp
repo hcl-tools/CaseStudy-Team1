@@ -10,9 +10,9 @@
 <head>
     <meta charset="UTF-8">
     <title>New Transaction</title>
-    <link rel="stylesheet" type="text/css" href="../css/Transactions.css">
+    <link rel="stylesheet" type="text/css" href="css/Transactions.css">
 </head>
-<body style="text-align: center" background="../images/BEANS.jpg">
+<body style="text-align: center" background="images/BEANS.jpg">
 <div class="box" id="box">
     <form action="createTransaction">
         <h1>New Transaction</h1>
