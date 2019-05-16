@@ -1,5 +1,7 @@
 package com.team1.bean;
 
+import com.team1.dao.AccountHandler;
+
 public class Account {
     private int AccountID = 0;
     private String AccountName = "";
@@ -12,7 +14,8 @@ public class Account {
     }
 
     public Double calcBalance() {
-        return 0.00;
+        this.balance = AccountHandler.getBalance(this.AccountID);
+        return this.balance;
     }
 
     public int getAccountID() { return AccountID; }
