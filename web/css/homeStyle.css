@@ -2,9 +2,14 @@ body{
     background-image: url("/images/FireAndMoney.jpg");
 }
 
+html, body{
+    margin: 0 !important;
+}
+
 .navbar{
     width: 100%;
     height: 70px;
     position: fixed;
     background-color: red;
+    border: 0px;
 }
