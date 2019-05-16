@@ -4,5 +4,5 @@ import com.team1.dao.DatabaseHandler;
 
 public class ApplicationHandler {
 
-    public DatabaseHandler dh = new DatabaseHandler();
+    public static DatabaseHandler dh = new DatabaseHandler();
 }
