@@ -66,7 +66,7 @@ public class AccountHandler {
         return accounts;
     }
 
-    public Double getBalance(int id) {
+    public static Double getBalance(int id) {
         Double balance = 0.00;
         ApplicationHandler.dh.doConnect();
         try {
