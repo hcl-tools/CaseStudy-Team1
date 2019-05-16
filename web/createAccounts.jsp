@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: brayden
+  User: Emma
   Date: 2019-05-16
   Time: 15:01
   To change this template use File | Settings | File Templates.
@@ -9,11 +9,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="Account.css" type="text/css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Create Account</title>
 </head>
 <body style="text-align: center; color: white" background="https://i.imgur.com/6wNbgPO.jpg">
-<img src="https://i.imgur.com/iYQj5cQ.png" >
+<img src="https://i.imgur.com/8x5O9zo.jpg" >
 <form action="/account">
     <h1>Create a New Account</h1>
     <p>What kind of account would you like to create?</p>
