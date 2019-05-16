@@ -15,7 +15,7 @@
 </head>
 <body style="text-align: center; color: white" background="https://i.imgur.com/6wNbgPO.jpg">
 <img src="https://i.imgur.com/8x5O9zo.jpg" >
-<form action="/account">
+<form action="account">
     <h1>Create a New Account</h1>
     <p>What kind of account would you like to create?</p>
     <select name="type">
