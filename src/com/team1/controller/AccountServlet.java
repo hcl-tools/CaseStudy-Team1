@@ -12,8 +12,12 @@ import java.sql.SQLException;
 @WebServlet("/account")
 public class AccountServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        RequestDispatcher rd = request.getRequestDispatcher("/html/Account.html");
-        rd.forward(request, response);
+        doGet(request, response);
+
+    }
+
+    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
         String accountType = request.getParameter("type");
         String accountName = request.getParameter("accountName");
         String sharedAccount = request.getParameter("sharetype");
@@ -30,9 +34,6 @@ public class AccountServlet extends javax.servlet.http.HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-
+        rd.forward(request, response);
     }
 }
