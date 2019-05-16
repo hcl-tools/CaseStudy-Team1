@@ -11,6 +11,10 @@ public class Account {
         this.AccountName = AccountName;
     }
 
+    public Double calcBalance() {
+        return 0.00;
+    }
+
     public int getAccountID() { return AccountID; }
     public String getAccountName() { return AccountName; }
 
