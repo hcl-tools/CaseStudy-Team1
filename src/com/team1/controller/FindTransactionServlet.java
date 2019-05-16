@@ -20,6 +20,10 @@ public class FindTransactionServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher rd = request.getRequestDispatcher("/jsp/findTransaction.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("findTransactions.jsp");
+        Double amount = Double.valueOf(request.getParameter("amount"));
+        request.setAttribute("amount", amount);
+        request.setAttribute("searchForm", false);
+        rd.forward(request, response);
     }
 }
