@@ -29,8 +29,6 @@ public class AccountHandler {
 
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-//            ApplicationHandler.dh.doClose();
         }
         return transactions;
     }
