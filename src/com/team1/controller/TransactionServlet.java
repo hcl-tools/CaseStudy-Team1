@@ -27,7 +27,7 @@ public class TransactionServlet extends javax.servlet.http.HttpServlet {
         if (ApplicationHandler.userAccounts.containsKey(fromAccountID)) {
             ApplicationHandler.dh.doStatement(" INSERT INTO Transactions (toAccountID, fromAccountID, amount) VALUES (" + toAccountID + ", " + fromAccountID + ", " + amount +");");
 //            ResultSet results = ApplicationHandler.dh.doStatement("SELECT * FROM Transactions WHERE toAccountID = "+toAccountID+" AND fromAccountID = " + fromAccountID + " AND amount = "+amount+";");
-            ResultSet results = ApplicationHandler.dh.doStatement("SELECT LAST_INSERT_ID();");
+            ResultSet results = (ResultSet) ApplicationHandler.dh.doStatement("SELECT LAST_INSERT_ID();");
             try {
                 ApplicationHandler.userTransactions.put(results.getInt("id"), new Transactions(results.getInt("id"), toAccountID, fromAccountID, amount));
             } catch (SQLException e) {

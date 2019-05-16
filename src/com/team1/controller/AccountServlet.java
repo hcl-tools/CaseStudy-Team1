@@ -26,11 +26,11 @@ public class AccountServlet extends javax.servlet.http.HttpServlet {
 
         try {
             ApplicationHandler.dh.doStatement("INSERT INTO Accounts (accountName, accountType) VALUES (" + accountName + ", " + accountType + ");");
-            ResultSet result = ApplicationHandler.dh.doStatement("SELECT LAST_INSERT_ID();");
-            ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (clientId, accountId) VALUES (" + ApplicationHandler.userData.get("id") + ", "+ result.getInt("id") + ");");
+            ResultSet result = (ResultSet) ApplicationHandler.dh.doStatement("SELECT MAX(id) AS 'id' FROM Accounts;");
+            ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (clientId, accountId) VALUES (" + ApplicationHandler.userData.get("id") + ", "+ result.getInt("id") + ");", "udpate");
 
             if (sharedAccount.equals("joint")){
-                ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (accountSharerId, accountId) VALUES (" + accountSharerId + ", " + result.getInt("id") + ");");
+                ApplicationHandler.dh.doStatement("INSERT INTO AccountsLinks (accountSharerId, accountId) VALUES (" + accountSharerId + ", " + result.getInt("id") + ");", "update");
             }
         } catch (SQLException e) {
             e.printStackTrace();
