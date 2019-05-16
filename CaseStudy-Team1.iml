@@ -17,7 +17,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library>
@@ -31,6 +31,15 @@
           <root url="file://$USER_HOME$/Desktop/Desktop/apache-tomcat-8.5.40/webapps/examples/WEB-INF/jsp/applet" />
           <root url="file://$USER_HOME$/Desktop/Desktop/apache-tomcat-8.5.40/webapps/examples/jsp/plugin/applet" />
         </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/Desktop/apache-tomcat-8.5.40/lib/servlet-api.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
   </component>
