@@ -12,6 +12,11 @@
     <link href="Account.css" type="text/css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Create Account</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 <body style="text-align: center; color: white" background="https://i.imgur.com/6wNbgPO.jpg">
 <img src="https://i.imgur.com/8x5O9zo.jpg" >
@@ -26,14 +31,18 @@
     <p>What would you like to name your account?</p>
     <input type="text" name="accountName">
     <p>Would you like to create a single or joint account? </p>
-    <select name="sharetype">
+    <select name="sharetype" id="shareType" onchange="checkUpdate()">
         <option value="single">Single</option>
         <option value="joint">Joint</option>
     </select>
-    <p>Enter the client number of the person you would like to share the account with:</p>
-    <input type="text" name="accountSharerId">
+    <br />
+    <div id="otherPerson" class="hide">
+        <p>Enter the client number of the person you would like to share the account with:</p>
+        <input type="text" name="accountSharerId">
+    </div>
     <input type="submit"/>
 
 </form>
+<script src="js/code.js"></script>
 </body>
 </html>
