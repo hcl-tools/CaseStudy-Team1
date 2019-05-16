@@ -3,6 +3,10 @@ body{
     background: linear-gradient(90deg, rgba(188,78,156,1) 0%, rgba(248,7,89,1) 100%);
 }
 
+form{
+    display: inline-block;
+}
+
 .formContainer{
     width: 34%;
     height: 50%;

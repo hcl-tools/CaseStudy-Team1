@@ -12,11 +12,20 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+
   <div class="topSpacer"></div>
   <div class="formContainer">
-    <form>
 
+    <form action="./login">
+      Username: <br>
+      <input type="text" name="username" value="">
+      <br>
+      Password: <br>
+      <input type="password" name="password" value="">
+      <br><br>
+      <input type="submit" value="Submit">
     </form>
+
   </div>
 
   </body>
