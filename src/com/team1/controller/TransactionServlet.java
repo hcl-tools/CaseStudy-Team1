@@ -6,7 +6,6 @@ import com.team1.util.ApplicationHandler;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -25,9 +24,9 @@ public class TransactionServlet extends javax.servlet.http.HttpServlet {
         Double amount = Double.valueOf(request.getParameter("amount"));
         ApplicationHandler.dh.doConnect();
         if (ApplicationHandler.userAccounts.containsKey(fromAccountID)) {
-            ApplicationHandler.dh.doStatement(" INSERT INTO Transactions (toAccountID, fromAccountID, amount) VALUES (" + toAccountID + ", " + fromAccountID + ", " + amount +");");
+            ApplicationHandler.dh.doStatement(" INSERT INTO Transactions (toAccountID, fromAccountID, amount) VALUES (\"" + toAccountID + "\", \"" + fromAccountID + "\", \"" + amount +"\");", "update");
 //            ResultSet results = ApplicationHandler.dh.doStatement("SELECT * FROM Transactions WHERE toAccountID = "+toAccountID+" AND fromAccountID = " + fromAccountID + " AND amount = "+amount+";");
-            ResultSet results = (ResultSet) ApplicationHandler.dh.doStatement("SELECT LAST_INSERT_ID();");
+            ResultSet results = (ResultSet) ApplicationHandler.dh.doStatement("SELECT MAX(id) AS 'id' FROM Transactions;");
             try {
                 ApplicationHandler.userTransactions.put(results.getInt("id"), new Transactions(results.getInt("id"), toAccountID, fromAccountID, amount));
             } catch (SQLException e) {
