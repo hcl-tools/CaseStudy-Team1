@@ -21,12 +21,26 @@
     <%
 
       int errorCode = 0;
+      int createAccount = 0;
+      int accountCreated = 0;
 
       if(request.getAttribute("errorCode") != null) {
         errorCode = (Integer) request.getAttribute("errorCode");
       }
+
+      if(request.getAttribute("createAccount") != null) {
+      createAccount = (Integer) request.getAttribute("createAccount");
+    }
+
+      if(request.getAttribute("accountCreated") != null) {
+        accountCreated = (Integer) request.getAttribute("accountCreated");
+      }
+
     %>
 
+    <%
+      if(createAccount == 0){
+    %>
     <form action="./login">
       <input type="hidden" name="page" value="lp">
       Username: <br>
@@ -36,10 +50,31 @@
       <input type="password" name="password" value="">
       <br><br>
       <input type="submit" name="createAccount" value="Create Account">
-      <input type="submit" value="Log In">
-
+      <input type="submit" name="login" value="Log In">
     </form>
+    <%
+      }
+    %>
 
+    <%
+      if(createAccount == 1){
+    %>
+    <form action="./login">
+      <input type="hidden" name="page" value="lp">
+      Client Name: <br>
+      <input type="text" name="newName" value="">
+      <br>
+      Username: <br>
+      <input type="text" name="newUsername" value="">
+      <br>
+      Password: <br>
+      <input type="password" name="newPassword" value="">
+      <br><br>
+      <input type="submit" name="finaliseAccount" value="Confirm Information">
+    </form>
+    <%
+      }
+    %>
 
     <%
       if(errorCode == 1){
@@ -48,6 +83,15 @@
     <%
       }
     %>
+
+    <%
+      if(accountCreated == 1){
+    %>
+    <h2>Account Created</h2>
+    <%
+      }
+    %>
+
   </div>
 
   </body>
