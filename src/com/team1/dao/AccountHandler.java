@@ -38,28 +38,28 @@ public class AccountHandler {
         List<Account> accounts = new ArrayList<>();
         try {
             ApplicationHandler.dh.doConnect();
-            ResultSet result = (ResultSet) ApplicationHandler.dh.doStatement("SELECT accountID FROM AccountLinks WHERE clientID = " + ApplicationHandler.userData.get("id"));
+            ResultSet result = (ResultSet) ApplicationHandler.dh.doStatement("SELECT id, accountID FROM AccountLinks WHERE clientID = " + ApplicationHandler.userData.get("id"));
             while (result.next()) {
-                ResultSet accountResult = (ResultSet) ApplicationHandler.dh.doStatement("SELECT * FROM Accounts WHERE `id` = " + result.getInt("id"));
+                ResultSet accountResult = (ResultSet) ApplicationHandler.dh.doStatement("SELECT * FROM Accounts WHERE \"id\" = \"" + result.getInt("id") + "\";");
                 Account nextAccount = null;
-                switch(accountResult.getString("accountType")) {
-                    case "Savings":
-                        nextAccount = new Savings(accountResult.getInt("id"), accountResult.getString("accountName"));
-                        break;
-                    case "Checks":
-                        nextAccount = new Checkings(accountResult.getInt("id"), accountResult.getString("accountName"));
-                        break;
-                    case "Current":
-                    default:
-                        nextAccount = new Current(accountResult.getInt("id"), accountResult.getString("accountName"));
+                if (accountResult.next()) {
+                    switch (accountResult.getString("accountType")) {
+                        case "Savings":
+                            nextAccount = new Savings(accountResult.getInt("id"), accountResult.getString("accountName"));
+                            break;
+                        case "Checks":
+                            nextAccount = new Checkings(accountResult.getInt("id"), accountResult.getString("accountName"));
+                            break;
+                        case "Current":
+                        default:
+                            nextAccount = new Current(accountResult.getInt("id"), accountResult.getString("accountName"));
+                    }
+                    accounts.add(nextAccount);
+                    ApplicationHandler.userAccounts.put(nextAccount.getAccountID(), nextAccount);
                 }
-                accounts.add(nextAccount);
-                ApplicationHandler.userAccounts.put(nextAccount.getAccountID(), nextAccount);
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-//            ApplicationHandler.dh.doClose();
         }
         return accounts;
     }
