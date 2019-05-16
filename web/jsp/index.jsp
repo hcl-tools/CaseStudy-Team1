@@ -8,9 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Hell's Bank Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
   </head>
   <body>
-  $END$
+  <div class="topSpacer"></div>
+  <div class="formContainer">
+    <form>
+
+    </form>
+  </div>
+
   </body>
 </html>
