@@ -20,6 +20,7 @@
       <li><a href="findAccount.jsp">Find Account</a></li>
       <li><a href="findTransactions.jsp">Find Transactions</a></li>
       <li><a href="createAccounts.jsp">Create Account</a></li>
+      <li><a href="createTransactions.jsp">Create Transaction</a></li>
       <li><a href="${pageContext.request.contextPath}/login?page=lout">Logout</a></li>
     </ul>
   </div>
