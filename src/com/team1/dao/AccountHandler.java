@@ -14,23 +14,23 @@ import java.util.List;
 public class AccountHandler {
 
     public static List<Transactions> getTransactions() {
-        List<Transactions> transactions = new ArrayList<>();
-        try {
-            ApplicationHandler.dh.doConnect();
-            ResultSet result = ApplicationHandler.dh.doStatement("");
-            while(result.next()) {
-                Transactions newTransaction = new Transactions();
-                newTransaction.setAmmount(result.getDouble("amount"));
-                newTransaction.setFromAccountID(result.getInt("fromAccountId"));
-                newTransaction.setToAccountID(result.getInt("toAccountId"));
-                newTransaction.setTransID(result.getInt("id"));
-                transactions.add(newTransaction);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return transactions;
+//        List<Transactions> transactions = new ArrayList<>();
+//        try {
+//            ApplicationHandler.dh.doConnect();
+//            ResultSet result = ApplicationHandler.dh.doStatement("");
+//            while(result.next()) {
+//                Transactions newTransaction = new Transactions();
+//                newTransaction.setAmmount(result.getDouble("amount"));
+//                newTransaction.setFromAccountID(result.getInt("fromAccountId"));
+//                newTransaction.setToAccountID(result.getInt("toAccountId"));
+//                newTransaction.setTransID(result.getInt("id"));
+//                transactions.add(newTransaction);
+//            }
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+        return null;
     }
 
     public static List<Account> getAccounts() {
@@ -38,9 +38,9 @@ public class AccountHandler {
         List<Account> accounts = new ArrayList<>();
         try {
             ApplicationHandler.dh.doConnect();
-            ResultSet result = ApplicationHandler.dh.doStatement("SELECT accountID FROM AccountLinks WHERE clientID = " + ApplicationHandler.userData.get("id"));
+            ResultSet result = (ResultSet) ApplicationHandler.dh.doStatement("SELECT accountID FROM AccountLinks WHERE clientID = " + ApplicationHandler.userData.get("id"));
             while (result.next()) {
-                ResultSet accountResult = ApplicationHandler.dh.doStatement("SELECT * FROM Accounts WHERE id = " + result.getInt("id"));
+                ResultSet accountResult = (ResultSet) ApplicationHandler.dh.doStatement("SELECT * FROM Accounts WHERE `id` = " + result.getInt("id"));
                 Account nextAccount = null;
                 switch(accountResult.getString("accountType")) {
                     case "Savings":
@@ -68,7 +68,7 @@ public class AccountHandler {
         Double balance = 0.00;
         ApplicationHandler.dh.doConnect();
         try {
-            ResultSet result = ApplicationHandler.dh.doStatement("SELECT * FROM Transactions WHERE fromAccountId = " + id + " OR toAccountId = " + id);
+            ResultSet result = (ResultSet) ApplicationHandler.dh.doStatement("SELECT * FROM Transactions WHERE fromAccountId = " + id + " OR toAccountId = " + id);
             while(result.next()) {
                 if (result.getString("fromAccountId").equals(id)) {
                     // We are sending out money.
