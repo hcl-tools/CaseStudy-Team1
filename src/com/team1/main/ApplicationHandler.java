@@ -8,5 +8,5 @@ import java.util.Map;
 public class ApplicationHandler {
 
     public static DatabaseHandler dh = new DatabaseHandler();
-    public Map<Object, Object> userData = new HashMap<>();
+    public static Map<Object, Object> userData = new HashMap<>();
 }
