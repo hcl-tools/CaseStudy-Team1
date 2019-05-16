@@ -8,24 +8,31 @@ import com.team1.bean.types.Savings;
 import com.team1.util.ApplicationHandler;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AccountHandler {
 
     public List<Transactions> getTransactions(String amount) {
+        List<Transactions> transactions = new ArrayList<>();
         try {
             ApplicationHandler.dh.doConnect();
             ResultSet result = ApplicationHandler.dh.doStatement("");
-            List<Account> accounts = new ArrayList<>();
+            while(result.next()) {
+                Transactions newTransaction = new Transactions();
+                newTransaction.setAmmount(result.getDouble("amount"));
+                newTransaction.setFromAccountID(result.getInt("fromAccountId"));
+                newTransaction.setToAccountID(result.getInt("toAccountId"));
+                newTransaction.setTransID(result.getInt("id"));
+                transactions.add(newTransaction);
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             ApplicationHandler.dh.doClose();
         }
-        return null;
+        return transactions;
     }
 
     public static List<Account> getAccounts() {
