@@ -1,4 +1,4 @@
-package com.team1.main;
+package com.team1.util;
 
 import com.team1.dao.DatabaseHandler;
 
