@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: brayden
-  Date: 2019-05-16
-  Time: 08:15
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
@@ -37,9 +30,6 @@
         accountCreated = (Integer) request.getAttribute("accountCreated");
       }
 
-    %>
-
-    <%
       if(createAccount == 0){
     %>
 
@@ -60,9 +50,7 @@
 
     <%
       }
-    %>
 
-    <%
       if(createAccount == 1){
     %>
 
