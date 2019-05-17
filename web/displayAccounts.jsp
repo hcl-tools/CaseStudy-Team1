@@ -38,6 +38,10 @@
                     }
                 %>
             </table>
+            <div style="display: inline-block; width: 100%;">
+                <a class="badBtn" href="displayAccounts.jsp">Go Back</a>
+                <a class="goodBtn" href="createAccounts.jsp">Create Account</a>
+            </div>
         </div>
         <div class="col-2"></div>
     </div>
