@@ -13,7 +13,6 @@
 
 
     <%
-
       int errorCode = 0;
       int createAccount = 0;
       int accountCreated = 0;
@@ -59,13 +58,13 @@
       <input type="hidden" name="page" value="lp">
       <br>
       <p class="formText">Client Name:</p> <br>
-      <input type="text" name="newName" value="">
+      <input type="text" name="newName" value="" required minlength="4" maxlength="16" size="10">
       <br>
       <p class="formText">Username:</p> <br>
-      <input type="text" name="newUsername" value="">
+      <input type="text" name="newUsername" value="" required minlength="4" maxlength="16" size="10">
       <br>
       <p class="formText">Password:</p> <br>
-      <input type="password" name="newPassword" value="">
+      <input type="password" name="newPassword" value="" required minlength="4" maxlength="16" size="10">
       <br><br>
       <input class="btn" type="submit" name="finaliseAccount" value="Confirm Information">
     </form>
