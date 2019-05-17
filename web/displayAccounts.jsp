@@ -39,7 +39,7 @@
                 %>
             </table>
             <div style="display: inline-block; width: 100%;">
-                <a class="badBtn" href="displayAccounts.jsp">Go Back</a>
+                <a class="badBtn" href="home.jsp">Go Back</a>
                 <a class="goodBtn" href="createAccounts.jsp">Create Account</a>
             </div>
         </div>
