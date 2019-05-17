@@ -49,8 +49,8 @@
       Password: <br>
       <input type="password" name="password" value="">
       <br><br>
-      <input type="submit" name="createAccount" value="Create Account">
       <input type="submit" name="login" value="Log In">
+      <input type="submit" name="createAccount" value="Create Account">
     </form>
     <%
       }
