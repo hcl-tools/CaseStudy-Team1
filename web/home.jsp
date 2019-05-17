@@ -13,6 +13,14 @@
   <link href="css/core.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+
+<div class="content">
+  <video autoplay muted loop id="video">
+    <source src="./videos/backgroundVideo.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
   <div class="navbar">
     <ul>
       <li><a href="displayTransactions.jsp">Display All Transactions</a></li>
