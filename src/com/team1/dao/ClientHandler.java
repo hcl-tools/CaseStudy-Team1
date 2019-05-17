@@ -9,7 +9,9 @@ public class ClientHandler {
     public static boolean createAccount(String name, String username, String password){
 
         ApplicationHandler.dh.doConnect();
-        ApplicationHandler.dh.doStatement("INSERT INTO Clients (name, username, password) VALUES (\"" + name + "\", \"" + username + "\", \"" + password + "\");", "update");
+        if (name != null && username != null && password != null) {
+            ApplicationHandler.dh.doStatement("INSERT INTO Clients (name, username, password) VALUES (\"" + name + "\", \"" + username + "\", \"" + password + "\");", "update");
+        }
         return true;
 
     }
