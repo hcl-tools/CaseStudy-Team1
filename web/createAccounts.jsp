@@ -9,16 +9,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="Account.css" type="text/css" rel="stylesheet">
+    <link href="css/Account.css" type="text/css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Create Account</title>
-    <style>
-        .hide {
-            display: none;
-        }
-    </style>
 </head>
-<body style="text-align: center; color: white" background="https://i.imgur.com/6wNbgPO.jpg">
+<body>
 <img src="https://i.imgur.com/8x5O9zo.jpg" >
 <form action="account">
     <h1>Create a New Account</h1>
@@ -40,7 +35,8 @@
         <p>Enter the client number of the person you would like to share the account with:</p>
         <input type="text" name="accountSharerId">
     </div>
-    <input type="submit"/>
+    <break/>
+    <input type="submit" class="button"/>
 
 </form>
 <script src="js/code.js"></script>

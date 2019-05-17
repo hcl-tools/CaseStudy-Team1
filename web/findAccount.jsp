@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/Braydens.css">
 </head>
 <body>
+    <img src="https://i.imgur.com/8x5O9zo.jpg">
     <main>
         <div class="row">
             <div class="col-2"></div>

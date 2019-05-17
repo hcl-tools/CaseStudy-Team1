@@ -12,7 +12,6 @@
   <link rel="stylesheet" type="text/css" href="css/homeStyle.css">
 </head>
 <body>
-
   <div class="navbar">
     <ul>
       <li><a href="displayTransactions.jsp">Display All Transactions</a></li>
@@ -24,7 +23,9 @@
       <li><a href="${pageContext.request.contextPath}/login?page=lout">Logout</a></li>
     </ul>
   </div>
-
+  <div class="logo">
+  <img src="https://i.imgur.com/8x5O9zo.jpg">
+  </div>
 </body>
 </html>
 

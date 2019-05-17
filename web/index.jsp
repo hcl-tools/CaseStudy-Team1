@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-
+    <img src="https://i.imgur.com/8x5O9zo.jpg">
   <div class="topSpacer">
     <h1>WELCOME TO HELL'S BANK</h1>
   </div>
