@@ -25,8 +25,7 @@ public class LoginService {
 
     public static ResultSet getAllClients(){
         ApplicationHandler.dh.doConnect();
-        ResultSet rs = (ResultSet) ApplicationHandler.dh.doStatement("SELECT * FROM Clients;");
-        return rs;
+        return ApplicationHandler.dh.doStatement("SELECT * FROM Clients;");
     }
 
 }
