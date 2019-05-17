@@ -28,6 +28,7 @@
                     <th>Account Number</th>
                     <th>Account Name</th>
                     <th>Amount Available</th>
+                    <th>Actions</th>
                 </tr>
                 <%
                     for (Account account : ApplicationHandler.userAccounts.values()) {
@@ -35,6 +36,10 @@
                         out.print("<td>" + account.getAccountID() + "</td>");
                         out.print("<td>" + account.getAccountName() + "</td>");
                         out.print("<td> $" + account.calcBalance() + "</td>");
+                        out.print(
+                                "<td><div style=\"display: inline-block; width: 100%;\"><a class='goodBtn'>Transfer</a><a class='badBtn'>History</a></div></td>"
+
+                        );
                         out.print("</tr>");
                     }
                 %>
