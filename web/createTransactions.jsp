@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <title>New Transaction</title>
     <link rel="stylesheet" type="text/css" href="css/Transactions.css">
+    <link href="css/core.css" type="text/css" rel="stylesheet">
 </head>
 <body style="text-align: center" background="images/BEANS.jpg">
 <img src="https://i.imgur.com/8x5O9zo.jpg">

@@ -10,6 +10,7 @@
 <head>
   <title>Hell's Bank</title>
   <link rel="stylesheet" type="text/css" href="css/homeStyle.css">
+  <link href="css/core.css" type="text/css" rel="stylesheet">
 </head>
 <body>
   <div class="navbar">

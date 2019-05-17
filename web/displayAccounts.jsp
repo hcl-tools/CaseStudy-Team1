@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/Braydens.css">
+    <link href="css/core.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <img src="https://i.imgur.com/8x5O9zo.jpg">

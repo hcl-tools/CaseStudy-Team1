@@ -10,6 +10,7 @@
 <html lang="en">
 <head>
     <link href="css/Account.css" type="text/css" rel="stylesheet">
+    <link href="css/core.css" type="text/css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Create Account</title>
 </head>
