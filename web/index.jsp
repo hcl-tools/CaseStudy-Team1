@@ -12,11 +12,11 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <img src="https://i.imgur.com/8x5O9zo.jpg">
+
+  <img src="https://i.imgur.com/8x5O9zo.jpg">
   <div class="topSpacer">
-    <h1>WELCOME TO HELL'S BANK</h1>
   </div>
-  <div class="formContainer">
+
 
     <%
 
@@ -41,17 +41,22 @@
     <%
       if(createAccount == 0){
     %>
+
+  <div class="formContainer">
     <form action="./login" method="post">
       <input type="hidden" name="page" value="lp">
-      Username: <br>
+      <br>
+      <p class="formText">Username:</p> <br>
       <input type="text" name="username" value="">
       <br>
-      Password: <br>
+      <p class="formText">Password:</p> <br>
       <input type="password" name="password" value="">
       <br><br>
-      <input type="submit" name="login" value="Log In">
-      <input type="submit" name="createAccount" value="Create Account">
+      <input class="btn" type="submit" name="login" value="Log In">
+      <input class="btn" type="submit" name="createAccount" value="Create Account">
     </form>
+  </div>
+
     <%
       }
     %>
@@ -59,19 +64,23 @@
     <%
       if(createAccount == 1){
     %>
+
+  <div class="createFormContainer">
     <form action="./login" method="post">
       <input type="hidden" name="page" value="lp">
-      Client Name: <br>
+      <br>
+      <p class="formText">Client Name:</p> <br>
       <input type="text" name="newName" value="">
       <br>
-      Username: <br>
+      <p class="formText">Username:</p> <br>
       <input type="text" name="newUsername" value="">
       <br>
-      Password: <br>
+      <p class="formText">Password:</p> <br>
       <input type="password" name="newPassword" value="">
       <br><br>
-      <input type="submit" name="finaliseAccount" value="Confirm Information">
+      <input class="btn" type="submit" name="finaliseAccount" value="Confirm Information">
     </form>
+  </div>
     <%
       }
     %>
@@ -92,7 +101,6 @@
       }
     %>
 
-  </div>
 
   </body>
 </html>

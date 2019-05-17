@@ -14,13 +14,78 @@ form{
     border-radius: 10px;
     box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.75);
     margin: auto;
+    text-align: center;
+    line-height: 10px;
+}
+
+.createFormContainer{
+    width: 34%;
+    height: 65%;
+    background-color: aquamarine;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.75);
+    margin: auto;
+    text-align: center;
+    line-height: 10px;
 }
 
 .topSpacer{
     width: 100%;
-    height: 25%;
+    height: 5%;
     text-align: center;
 }
+
+.formSpacer{
+    width: 100%;
+    height: 15%;
+    text-align: center;
+}
+
+.formText{
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Arial Black";
+}
+
+input[type="text"]{
+    width:100%;
+    height: 35px;
+    padding:10px;
+    margin-bottom: 10px;
+    border:3px solid #f200e7;
+}
+
+input[type="password"]{
+    width:100%;
+    height: 35px;
+    padding:10px;
+    margin-top: 10px;
+    border:3px solid #f200e7;
+}
+
+.btn {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 16px;
+    padding: 14px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    outline: none;
+    overflow: hidden;
+    border: none;
+    background: none;
+}
+
+.btn:hover{
+    color: #ff00e1;
+}
+
 img {
     display: block;
     margin-left: auto;
