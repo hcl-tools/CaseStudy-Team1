@@ -19,7 +19,7 @@
 
 </head>
 <body>
-    <img src="https://i.imgur.com/8x5O9zo.jpg">
+    <img src="https://i.imgur.com/8x5O9zo.jpg" href="home.jsp">
     <main>
         <div class="row">
             <div class="col-2"></div>
@@ -67,6 +67,10 @@
                         }
                     %>
                 </table>
+                <div style="display: inline-block; width: 100%;">
+                    <a class="badBtn" href="findAccount.jsp">Go Back</a>
+                    <a class="goodBtn" href="createAccounts.jsp">Create Account</a>
+                </div>
                 <%
                     }
                 %>

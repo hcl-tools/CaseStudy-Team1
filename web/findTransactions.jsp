@@ -17,7 +17,7 @@
     <link href="css/core.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <img src="https://i.imgur.com/8x5O9zo.jpg">
+    <img src="https://i.imgur.com/8x5O9zo.jpg" href="home.jsp">
     <main>
         <div class="row">
             <div class="col-2"></div>
