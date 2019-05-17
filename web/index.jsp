@@ -41,7 +41,7 @@
     <%
       if(createAccount == 0){
     %>
-    <form action="./login">
+    <form action="./login" method="post">
       <input type="hidden" name="page" value="lp">
       Username: <br>
       <input type="text" name="username" value="">
@@ -59,7 +59,7 @@
     <%
       if(createAccount == 1){
     %>
-    <form action="./login">
+    <form action="./login" method="post">
       <input type="hidden" name="page" value="lp">
       Client Name: <br>
       <input type="text" name="newName" value="">
